@@ -1,0 +1,18 @@
+{
+  "name": "@kishimy/sibedge-create-react",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./tasks/scr.ts"
+  },
+  "author": "KrukovskijVA",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  },
+  "dependencies": {},
+  "description": ""
+}

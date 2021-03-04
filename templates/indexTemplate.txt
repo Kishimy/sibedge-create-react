@@ -1,0 +1,13 @@
+import React, { useState } from 'react';
+
+import { PropsType } from './models;
+
+const %{Template}% = (props: PropsType) => {
+    const state = useState('%{Template}%');
+
+    return {
+        <div>New ${state} Component</div>
+    }
+}
+
+export default %{Template}%;
