@@ -1,6 +1,6 @@
 {
   "name": "@kishimy/sibedge-create-react",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "repository": "kishimy/sibedge-create-react",
   "main": "index.js",
   "scripts": {
