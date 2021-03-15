@@ -4,8 +4,7 @@
   "repository": "kishimy/sibedge-create-react",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sibedge-create-react": "ts-node ./tasks/cli.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "KrukovskijVA",
   "license": "ISC",
@@ -13,6 +12,9 @@
     "@types/node": "^14.14.31",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.2"
+  },
+  "bin": {
+    "sibedge-create-react": "cli.js"
   },
   "dependencies": {},
   "description": ""
