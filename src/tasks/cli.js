@@ -19,7 +19,6 @@ var createComponent = function (name) {
     fs.mkdir(name, function () {
         Promise.all([
             new Promise(function (resolve) {
-                console.log(path.resolve(__dirname, '../templates/indexTemplate.txt'));
                 fs.readFile(path.resolve(__dirname, '../templates/indexTemplate.txt'), 'utf-8', function (_err, data) {
                     fs.writeFile("./" + name + "/index.tsx", data.replace(/%{Template}%/gi, name), function () {
                         resolve("./" + name + "/index.tsx");
@@ -33,8 +32,8 @@ var createComponent = function (name) {
             }),
             new Promise(function (resolve) {
                 fs.readFile(path.resolve(__dirname, '../templates/modelsTemplate.txt'), 'utf-8', function (_err, data) {
-                    fs.writeFile("./" + name + "/models.tsx", data, function () {
-                        resolve("./" + name + "/models.tsx");
+                    fs.writeFile("./" + name + "/models.ts", data, function () {
+                        resolve("./" + name + "/models.ts");
                     });
                 });
             })
