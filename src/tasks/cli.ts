@@ -1,4 +1,7 @@
+#!/usr/bin/env node
+
 import * as fs from 'fs';
+import * as path from 'path';
 
 const [,, ...args] = process.argv;
 const addConsoleMsg = (msg: string) => {
@@ -18,7 +21,7 @@ const createComponent = (name: string) => {
     fs.mkdir(name, () => {
         Promise.all([
             new Promise((resolve) => {
-                fs.readFile('./templates/indexTemplate.txt', 'utf-8', (_err, data) => {
+                fs.readFile(path.resolve(__dirname, '../templates/indexTemplate.txt'), 'utf-8', (_err, data) => {
                     fs.writeFile(`./${name}/index.tsx`, data.replace(/%{Template}%/gi, name), () => {
                         resolve(`./${name}/index.tsx`);
                     })
@@ -30,9 +33,9 @@ const createComponent = (name: string) => {
                 });
             }),
             new Promise((resolve) => {
-                fs.readFile('./templates/modelsTemplate.txt', 'utf-8', (_err, data) => {
-                    fs.writeFile(`./${name}/models.tsx`, data, () => {
-                        resolve(`./${name}/models.tsx`);
+                fs.readFile(path.resolve(__dirname, '../templates/modelsTemplate.txt'), 'utf-8', (_err, data) => {
+                    fs.writeFile(`./${name}/models.ts`, data, () => {
+                        resolve(`./${name}/models.ts`);
                     })
                 });
             })

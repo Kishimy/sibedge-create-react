@@ -1,6 +1,8 @@
+#!/usr/bin/env node
 "use strict";
 exports.__esModule = true;
 var fs = require("fs");
+var path = require("path");
 var _a = process.argv, args = _a.slice(2);
 var addConsoleMsg = function (msg) {
     console.log();
@@ -17,7 +19,8 @@ var createComponent = function (name) {
     fs.mkdir(name, function () {
         Promise.all([
             new Promise(function (resolve) {
-                fs.readFile('./templates/indexTemplate.txt', 'utf-8', function (_err, data) {
+                console.log(path.resolve(__dirname, '../templates/indexTemplate.txt'));
+                fs.readFile(path.resolve(__dirname, '../templates/indexTemplate.txt'), 'utf-8', function (_err, data) {
                     fs.writeFile("./" + name + "/index.tsx", data.replace(/%{Template}%/gi, name), function () {
                         resolve("./" + name + "/index.tsx");
                     });
@@ -29,7 +32,7 @@ var createComponent = function (name) {
                 });
             }),
             new Promise(function (resolve) {
-                fs.readFile('./templates/modelsTemplate.txt', 'utf-8', function (_err, data) {
+                fs.readFile(path.resolve(__dirname, '../templates/modelsTemplate.txt'), 'utf-8', function (_err, data) {
                     fs.writeFile("./" + name + "/models.tsx", data, function () {
                         resolve("./" + name + "/models.tsx");
                     });
