@@ -3,7 +3,7 @@ import React, { useState, FC } from 'react';
 import { PropsType } from './models;
 
 const %{Template}%: FC<PropsType> = (props) => {
-    const state = useState('%{Template}%');
+    const [state, setState] = useState('%{Template}%');
 
     return {
         <div>New ${state} Component</div>
