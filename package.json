@@ -1,16 +1,17 @@
 {
   "name": "@kishimy/sibedge-create-react",
-  "version": "0.0.18",
+  "version": "0.0.20",
   "repository": "kishimy/sibedge-create-react",
   "main": "index.js",
   "scripts": {
+    "build": "tsc ./src/tasks/cli.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "KrukovskijVA",
   "license": "ISC",
   "devDependencies": {},
   "bin": {
-    "sibedge-create-react": "tasks/index.ts"
+    "sibedge-create-react": "./src/tasks/cli.ts"
   },
   "dependencies": {
     "@types/node": "^14.14.31",
