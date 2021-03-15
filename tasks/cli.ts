@@ -1,6 +1,8 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 
-const args = process.argv.slice(2);
+const [,, ...args] = process.argv;
 const addConsoleMsg = (msg: string) => {
     console.log();
     console.log('-------------------------------------------------------');

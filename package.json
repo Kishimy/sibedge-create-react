@@ -1,11 +1,11 @@
 {
   "name": "@kishimy/sibedge-create-react",
-  "version": "0.0.1",
+  "version": "0.0.12",
   "repository": "kishimy/sibedge-create-react",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node ./tasks/scr.ts"
+    "sibedge-create-react": "ts-node ./tasks/cli.ts"
   },
   "author": "KrukovskijVA",
   "license": "ISC",

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, FC } from 'react';
 
 import { PropsType } from './models;
 
-const %{Template}% = (props: PropsType) => {
+const %{Template}%: FC<PropsType> = (props) => {
     const state = useState('%{Template}%');
 
     return {
